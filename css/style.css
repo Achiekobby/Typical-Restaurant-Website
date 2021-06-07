@@ -171,6 +171,9 @@ img {
   cursor: pointer;
   transition: 0.4s;
 }
+.nav .nav-menu .nav-list-item .nav-link.active-link {
+  color: var(--primary-color);
+}
 .nav .nav-menu .nav-list-item .nav-link:hover {
   color: var(--primary-color);
 }

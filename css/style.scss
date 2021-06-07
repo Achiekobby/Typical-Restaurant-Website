@@ -182,6 +182,7 @@ img {
             top: var(--header-height);
         }
 
+        
         .nav-list-item {
             margin-bottom: var(--my-2);
 
@@ -190,6 +191,11 @@ img {
                 font-weight: var(--fontweight-medium);
                 cursor: pointer;
                 transition: .4s;
+
+                &.active-link {
+                    color: var(--primary-color);
+                }
+
 
                 &:hover {
                     color: var(--primary-color);
