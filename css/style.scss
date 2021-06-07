@@ -1,5 +1,233 @@
-*{
-    padding: 0;
-    margin: 0;
+:root {
+
+    --header-height: 3rem;
+
+    /**********COLORS***********/
+    --primary-color: #069C54;
+    --secondary-color: #048654;
+    --title-color: #393939;
+    --text-color: #707070;
+    --text-color-light: #A6A6A6;
+    --body-color: #FBFEFD;
+    --container-color: #FFFFFF;
+
+    /*********FONT AND TYPOGRAPHY***************/
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2.3rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+
+    /***************FONT WEIGHT**********************/
+    --fontweight-medium: 500;
+    --fontweight-bold: 600;
+
+    /****************MARGINS**************************/
+    --my-1: 0.5rem;
+    --my-2: 1rem;
+    --my-3: 1.5rem;
+    --my-4: 2rem;
+    --my-5: 2.5rem;
+    --my-6: 3rem;
+
+    /*********************Z-INDEX***********************/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+/************************SMALL SCREENS**************/
+@media screen and (min-width:768px) {
+
+    :root {
+        --biggest-font-size: 4rem;
+        --h1-font-size: 2.25rem;
+        --h2-font-size: 1.5rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: 0.875em;
+        --smaller-font-size: 0.813rem;
+    }
+}
+
+/*******************BASE CSS*******************************/
+*,
+::before,
+::after {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        width: 1.1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--container-color);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 1.5rem;
+    }
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/***************CLASS CSS******************/
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.section-title,
+.section-subtitle {
+    text-align: center;
+}
+
+.section-title {
+    font-size: var(--h1-font-size);
+    color: var(--title-color);
+    margin-bottom: var(--my-3);
+}
+
+.section-subtitle {
+    display: block;
+    color: var(--primary-color);
+    font-weight: var(--fontweight-medium);
+    margin-bottom: var(--my-1);
+}
+
+// END OF CLASS CSS
+
+// CONTAINER LAYOUT STARTS HERE
+.bd-container {
+    max-width: 960px;
+    width: calc(100% - 2rem);
+    margin-left: var(--my-2);
+    margin-right: var(--my-2);
+}
+
+.bd-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.header-1 {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background: var(--body-color);
+}
+
+.nav {
+    max-width: 1024px;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+        margin-top: var(--my-2);
+        margin-bottom: var(--my-2);
+
+        h1 {
+            color: var(--text-color);
+            font-size: var(--h1-font-size);
+            font-weight: var(--fontweight-medium);
+
+            span {
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .nav-menu {
+
+        &.show-menu{
+            top: var(--header-height);
+        }
+
+        .nav-list-item {
+            margin-bottom: var(--my-2);
+
+            .nav-link {
+                color: var(--text-color);
+                font-weight: var(--fontweight-medium);
+                cursor: pointer;
+                transition: .4s;
+
+                &:hover {
+                    color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .nav-toggle {
+        padding: 0 .3rem;
+        color: var(--text-color);
+        font-size: 1.5rem;
+        font-weight: var(--fontweight-medium);
+        cursor: pointer;
+        transition: .4s;
+        border: 1px solid var(--text-color);
+        border-radius: .3rem;
+
+        &:hover {
+            transform: translateY(-3px);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .nav-menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: var(--body-color);
+        transition: all 1s ease;
+        box-shadow: 0 4px 4px rgba($color: #000000, $alpha: .2);
+        border-radius: 0 0 1rem 1rem;
+        z-index: var(--z-fixed);
+    }
 }
