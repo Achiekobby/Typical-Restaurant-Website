@@ -145,6 +145,36 @@ img {
     gap: 1.5rem;
 }
 
+.scrollTop{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .3rem;
+    background: rgba(6,156,84,.5);
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    visibility: hidden;
+
+    &.scrollBtn-visible{
+        visibility: visible;
+        bottom: 1.5rem;
+    }
+
+    &:hover{
+        background: var(--secondary-color);
+        transform: translateY(-3px);
+    }
+
+    .scrollTop-icon{
+        font-size: 1.8rem;
+        color: var(--body-color);
+    }
+}
+
 .header-1 {
     position: fixed;
     width: 100%;
@@ -152,6 +182,10 @@ img {
     left: 0;
     z-index: var(--z-fixed);
     background: var(--body-color);
+
+    &.scroll-header{
+        box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
+    }
 }
 
 .nav {
@@ -182,7 +216,6 @@ img {
             top: var(--header-height);
         }
 
-        
         .nav-list-item {
             margin-bottom: var(--my-2);
 
@@ -237,3 +270,52 @@ img {
         z-index: var(--z-fixed);
     }
 }
+
+// HOME SECTION STYLING
+section.home{
+    .home-container{
+        height: calc(100vh - var(--header-height));
+        align-content: center;
+    }
+
+    .home-text{
+
+        .title{
+        color: var(--primary-color);
+        font-size: var(--biggest-font-size);
+        margin-bottom: var(--my-1);
+        }
+
+        .subtitle{
+            font-size: var(--h1-font-size);
+            color: var(--title-color);
+            margin-bottom: var(--my-4);
+            font-weight: var(--fontweight-medium);
+        }
+    }
+    .home-img{
+        width: 300px;
+        justify-self: center;
+    }
+}
+// END OF HOME SECTION STYLING
+
+// PRIMARY BUTTON DESIGN
+.btn{
+    padding: var(--my-2);
+    background: var(--primary-color);
+    color:#FFF;
+    font-size: var(--h3-font-size);
+    font-weight: var(--fontweight-medium);
+    font-family: "Roboto", sans-serif;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    box-shadow: 3px 5px 14px 0px rgba(155, 165, 148, 0.75);
+    transition: all .5s linear;
+
+    &:hover{
+        transform: translateY(-5px);
+    }
+}
+// END OF BUTTON DESIGN
