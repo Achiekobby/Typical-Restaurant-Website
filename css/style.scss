@@ -300,6 +300,30 @@ section.home{
 }
 // END OF HOME SECTION STYLING
 
+// START OF ABOUT SECTION STYLING
+section.about{
+
+    .about-text{
+        text-align: center;
+
+        .section-subtitle{
+            font-size: var(--h1-font-size);
+            color: var(--primary-color);
+            font-weight: var(--fontweight-medium);
+        }
+
+        .about-description{
+            margin-bottom: var(--my-3);
+        }
+    }
+    .about-img{
+        width: 280px;
+        border-radius: .5rem;
+        justify-self: center;
+    }
+}
+// END OF ABOUT SECTION STYLING
+
 // PRIMARY BUTTON DESIGN
 .btn{
     padding: var(--my-2);

@@ -8,8 +8,8 @@ const headerNav = document.getElementById("header");
 const scrollTopBtn = document.getElementById("scrollTop");
 
 const showMenu = () => {
-    if(toggleBtn && navMenu){
-        toggleBtn.addEventListener('click',()=>{
+    if (toggleBtn && navMenu) {
+        toggleBtn.addEventListener('click', () => {
             navMenu.classList.toggle('show-menu');
             mobileMenu.classList.toggle("bx-exit");
             mobileMenu.classList.toggle("bx-menu");
@@ -20,28 +20,27 @@ showMenu();
 // end of code to show mobile view navigation menu
 
 // code to remove the show menu class whenever a link is clicked
-const clickLink = ()=>{
+const clickLink = () => {
     navMenu.classList.remove("show-menu");
+    mobileMenu.classList.add('bx-menu');
+    mobileMenu.classList.remove('bx-exit');
 }
-navLinks.forEach(n=>n.addEventListener('click',clickLink));
+navLinks.forEach(n => n.addEventListener('click', clickLink));
 // code to remove the show menu class whenever a link is clicked ends
 
 //scroll sections active links 
-
-
-const activeOnScroll = ()=>{
+const activeOnScroll = () => {
     const scrollY = window.pageYOffset;
 
-    sections.forEach(currentSection=>{
+    sections.forEach(currentSection => {
         const sectionHeight = currentSection.offsetHeight;
-        const sectionTop = currentSection.offsetTop-50;
-        sectionId  = currentSection.getAttribute("id");
+        const sectionTop = currentSection.offsetTop - 50;
+        sectionId = currentSection.getAttribute("id");
 
-        if(scrollY > sectionTop && scrollY<=sectionHeight +sectionTop){
-            document.querySelector('.nav-menu a[href*='+sectionId+']').classList.add('active-link');
-        }
-        else{
-            document.querySelector('.nav-menu a[href=*'+sectionId+']').classList.remove('active-link');
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link');
+        } else {
+            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link');
         }
     })
 }
@@ -49,22 +48,21 @@ window.addEventListener('scroll', activeOnScroll);
 //scroll sections active links ends here 
 
 // Method to change the header background
-const headerScroll = ()=>{
-    if(this.scrollY >=200){
+const headerScroll = () => {
+    if (this.scrollY >= 200) {
         headerNav.classList.add("scroll-header");
-    }
-    else{
+    } else {
         headerNav.classList.remove("scroll-header");
     }
 }
-window.addEventListener('scroll',headerScroll);
+window.addEventListener('scroll', headerScroll);
 
 // Method to toggle display of the scrolltop icon
-const scrollTop = ()=>{
-    if(scrollY >= 560){
+const scrollTop = () => {
+    if (this.scrollY >= 560) {
         scrollTopBtn.classList.add("scrollBtn-visible");
-    }
-    else{
+    } else {
         scrollTopBtn.classList.remove("scrollBtn-visible");
     }
 }
+window.addEventListener('scroll', scrollTop);

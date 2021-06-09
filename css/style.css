@@ -258,6 +258,23 @@ section.home .home-img {
   justify-self: center;
 }
 
+section.about .about-text {
+  text-align: center;
+}
+section.about .about-text .section-subtitle {
+  font-size: var(--h1-font-size);
+  color: var(--primary-color);
+  font-weight: var(--fontweight-medium);
+}
+section.about .about-text .about-description {
+  margin-bottom: var(--my-3);
+}
+section.about .about-img {
+  width: 280px;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
 .btn {
   padding: var(--my-2);
   background: var(--primary-color);
