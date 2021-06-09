@@ -261,11 +261,6 @@ section.home .home-img {
 section.about .about-text {
   text-align: center;
 }
-section.about .about-text .section-subtitle {
-  font-size: var(--h1-font-size);
-  color: var(--primary-color);
-  font-weight: var(--fontweight-medium);
-}
 section.about .about-text .about-description {
   margin-bottom: var(--my-3);
 }
@@ -273,6 +268,34 @@ section.about .about-img {
   width: 280px;
   border-radius: 0.5rem;
   justify-self: center;
+}
+
+section.services .services-container {
+  row-gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+section.services .services-container .services-content {
+  text-align: center;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.2rem;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+section.services .services-container .services-content .services-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #FFF;
+  fill: var(--primary-color);
+  margin-bottom: var(--my-1);
+}
+section.services .services-container .services-content .services-title {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--my-1);
+}
+section.services .services-container .services-content .services-description {
+  padding: 0 1.5rem;
 }
 
 .btn {
@@ -290,4 +313,10 @@ section.about .about-img {
 }
 .btn:hover {
   transform: translateY(-5px);
+}
+
+.section-subtitle {
+  font-size: var(--h1-font-size);
+  color: var(--primary-color);
+  font-weight: var(--fontweight-medium);
 }/*# sourceMappingURL=style.css.map */

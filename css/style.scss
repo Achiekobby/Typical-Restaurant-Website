@@ -306,12 +306,6 @@ section.about{
     .about-text{
         text-align: center;
 
-        .section-subtitle{
-            font-size: var(--h1-font-size);
-            color: var(--primary-color);
-            font-weight: var(--fontweight-medium);
-        }
-
         .about-description{
             margin-bottom: var(--my-3);
         }
@@ -323,6 +317,45 @@ section.about{
     }
 }
 // END OF ABOUT SECTION STYLING
+
+// START OF SERVICES SECTION STYLING
+section.services{
+
+    .services-container{
+        row-gap: 2.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+
+        .services-content{
+            text-align: center;
+          border: none;
+            border-radius: .5rem;
+            padding: 1.2rem;
+            box-shadow: 0 2px 4px  2px rgba($color: #000000, $alpha: .2);
+
+            .services-img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                background-color: #FFF; 
+               fill: var(--primary-color);
+                margin-bottom: var(--my-1);
+           
+                
+            }
+
+            .services-title{
+                font-size: var(--h3-font-size);
+                color: var(--title-color);
+                margin-bottom: var(--my-1);
+            }
+
+            .services-description{
+                padding: 0 1.5rem;
+            }
+        }
+    }
+}
+// END OF SERVICES SECTION STYLING
 
 // PRIMARY BUTTON DESIGN
 .btn{
@@ -343,3 +376,8 @@ section.about{
     }
 }
 // END OF BUTTON DESIGN
+.section-subtitle {
+    font-size: var(--h1-font-size);
+    color: var(--primary-color);
+    font-weight: var(--fontweight-medium);
+}
