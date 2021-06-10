@@ -316,14 +316,16 @@ section.menu .menu-container .menu-content .menu-img {
   align-self: center;
   margin-bottom: var(--my-2);
 }
-section.menu .menu-container .menu-content .menu-name, section.menu .menu-container .menu-content .menu-price {
+section.menu .menu-container .menu-content .menu-name,
+section.menu .menu-container .menu-content .menu-price {
   font-weight: var(--fontweight-bold);
   color: var(--title-color);
 }
 section.menu .menu-container .menu-content .menu-name {
   font-size: var(--normal-font-size);
 }
-section.menu .menu-container .menu-content .menu-detail, section.menu .menu-container .menu-content .menu-price {
+section.menu .menu-container .menu-content .menu-detail,
+section.menu .menu-container .menu-content .menu-price {
   font-size: var(--small-font-size);
 }
 section.menu .menu-container .menu-content .menu-detail {
@@ -371,6 +373,63 @@ section.contact .contact-container .contact-button i {
   font-size: 1.3em;
   align-self: center;
   margin-right: var(--my-1);
+}
+
+footer.footer {
+  background: #f4f4f4;
+}
+footer.footer .footer-container {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 2rem;
+  margin: var(--my-3) var(--my-2);
+  padding: var(--my-3) 0;
+}
+footer.footer .footer-container .footer-content .footer-title {
+  color: var(--primary-color);
+  font-size: var(--h2-font-size);
+  font-weight: var(--fontweight-bold);
+  margin-bottom: var(--my-2);
+}
+footer.footer .footer-container .footer-content .footer-link {
+  display: inline-block;
+  color: var(--text-color);
+  margin-bottom: var(--my-1);
+}
+footer.footer .footer-container .footer-content .footer-logo {
+  font-size: var(--h3-font-size);
+  color: var(--primary-color);
+  font-weight: var(--fontweight-bold);
+  margin: 0.25rem 0 var(--my-3);
+}
+footer.footer .footer-container .footer-content .footer-logo:hover {
+  color: var(--primary-color);
+}
+footer.footer .footer-container .footer-content .social .footer-social {
+  font-size: 1.5rem;
+  color: var(--title-color);
+  margin-right: var(--my-2);
+}
+footer.footer .footer-container .footer-content .footer-description {
+  display: block;
+  font-size: var(--small-font-size);
+}
+footer.footer .footer-container .footer-content .address-list li {
+  margin-bottom: var(--my-2);
+}
+footer.footer .footer-container .footer-content .address-list li i {
+  color: var(--primary-color);
+  margin-right: var(--my-1);
+  font-weight: var(--fontweight-medium);
+}
+footer.footer hr {
+  background: var(--text-color);
+  font-size: 0.5rem;
+  margin-top: 3.5rem;
+}
+footer.footer .footer-copyright {
+  text-align: center;
+  font-size: var(--small-font-size);
+  color: var(--text-color);
 }
 
 .btn {
