@@ -339,8 +339,6 @@ section.services{
                 background-color: #FFF; 
                fill: var(--primary-color);
                 margin-bottom: var(--my-1);
-           
-                
             }
 
             .services-title{
@@ -356,6 +354,91 @@ section.services{
     }
 }
 // END OF SERVICES SECTION STYLING
+
+// START MENU STYLING
+section.menu{
+    .menu-container{
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+
+        .menu-content{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--container-color);
+            border-radius: .5rem;
+            box-shadow: 0 2px 40px rgba($color: #000000, $alpha: 0.2);
+            padding: .75rem;
+
+            .menu-img{
+                width: 100px;
+                align-self: center;
+                margin-bottom: var(--my-2);
+            }
+
+            .menu-name, .menu-price{
+                font-weight: var(--fontweight-bold);
+                color: var(--title-color);
+            }
+
+            .menu-name{
+                font-size: var(--normal-font-size);
+            }
+            .menu-detail, .menu-price{
+                font-size: var(--small-font-size);
+            }
+
+            .menu-detail{
+                margin-bottom:var(--my-1);
+            }
+
+            .btn{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: flex;
+                padding: .625rem, .813rem;
+                border-radius:.5rem 0 .5rem 0 ;
+                
+            }
+        }
+    }
+}
+// END MENU STYLING
+
+// APP SECTION STYLING STARTS HERE
+section.app{
+    .app-data{
+        text-align: center;
+
+        .app-description{
+            line-height: 1.75;
+            margin-bottom: var(--my-5);
+        }
+
+        .app-stores{
+            margin-bottom: var(--my-4);
+
+            .app-store{
+                margin:0 var(--my-1) ;
+                
+                .app-down-img{
+                    width: 130px;
+                    justify-self: center;
+                }
+            }
+        }
+        .app-img{
+            width: 230px;
+            justify-self: center;
+        }
+    }
+}
+// APP SECTION STYLING ENDS HERE
+
+// CONTACT SECTION STYLING STARTS HERE
+
+// CONTACT SECTION STYLING ENDS HERE
 
 // PRIMARY BUTTON DESIGN
 .btn{

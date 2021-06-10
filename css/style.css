@@ -298,6 +298,68 @@ section.services .services-container .services-content .services-description {
   padding: 0 1.5rem;
 }
 
+section.menu .menu-container {
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+section.menu .menu-container .menu-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.2);
+  padding: 0.75rem;
+}
+section.menu .menu-container .menu-content .menu-img {
+  width: 100px;
+  align-self: center;
+  margin-bottom: var(--my-2);
+}
+section.menu .menu-container .menu-content .menu-name, section.menu .menu-container .menu-content .menu-price {
+  font-weight: var(--fontweight-bold);
+  color: var(--title-color);
+}
+section.menu .menu-container .menu-content .menu-name {
+  font-size: var(--normal-font-size);
+}
+section.menu .menu-container .menu-content .menu-detail, section.menu .menu-container .menu-content .menu-price {
+  font-size: var(--small-font-size);
+}
+section.menu .menu-container .menu-content .menu-detail {
+  margin-bottom: var(--my-1);
+}
+section.menu .menu-container .menu-content .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  padding: 0.625rem, 0.813rem;
+  border-radius: 0.5rem 0 0.5rem 0;
+}
+
+section.app .app-data {
+  text-align: center;
+}
+section.app .app-data .app-description {
+  line-height: 1.75;
+  margin-bottom: var(--my-5);
+}
+section.app .app-data .app-stores {
+  margin-bottom: var(--my-4);
+}
+section.app .app-data .app-stores .app-store {
+  margin: 0 var(--my-1);
+}
+section.app .app-data .app-stores .app-store .app-down-img {
+  width: 130px;
+  justify-self: center;
+}
+section.app .app-data .app-img {
+  width: 230px;
+  justify-self: center;
+}
+
 .btn {
   padding: var(--my-2);
   background: var(--primary-color);
