@@ -360,6 +360,19 @@ section.app .app-data .app-img {
   justify-self: center;
 }
 
+section.contact .contact-container {
+  text-align: center;
+}
+section.contact .contact-container .contact-description {
+  line-height: 1.75;
+  margin-bottom: var(--my-3);
+}
+section.contact .contact-container .contact-button i {
+  font-size: 1.3em;
+  align-self: center;
+  margin-right: var(--my-1);
+}
+
 .btn {
   padding: var(--my-2);
   background: var(--primary-color);

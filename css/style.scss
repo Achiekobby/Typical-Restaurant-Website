@@ -437,8 +437,27 @@ section.app{
 // APP SECTION STYLING ENDS HERE
 
 // CONTACT SECTION STYLING STARTS HERE
+section.contact{
+    .contact-container{
+        text-align: center;
 
+        .contact-description{
+            line-height: 1.75;
+            margin-bottom: var(--my-3);
+        }
+        .contact-button{
+            i{
+                font-size: 1.3em;
+                align-self: center;
+                margin-right: var(--my-1);
+            }
+        }
+    }
+}
 // CONTACT SECTION STYLING ENDS HERE
+
+// FOOTER SECTION STYLING STARTS HERE
+// FOOTER SECTION STYLING ENDS HERE
 
 // PRIMARY BUTTON DESIGN
 .btn{
