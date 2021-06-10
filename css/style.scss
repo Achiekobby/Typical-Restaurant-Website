@@ -417,6 +417,7 @@ section.menu {
 
 // APP SECTION STYLING STARTS HERE
 section.app {
+
     .app-data {
         text-align: center;
 
@@ -441,6 +442,7 @@ section.app {
         .app-img {
             width: 230px;
             justify-self: center;
+            background: green;
         }
     }
 }
@@ -472,7 +474,7 @@ section.contact {
 // FOOTER SECTION STYLING STARTS HERE
 footer.footer {
     background: #f4f4f4;
-  
+
     .footer-container {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         row-gap: 2rem;
@@ -481,14 +483,14 @@ footer.footer {
 
         .footer-content {
 
-            .footer-title{
+            .footer-title {
                 color: var(--primary-color);
                 font-size: var(--h2-font-size);
                 font-weight: var(--fontweight-bold);
                 margin-bottom: var(--my-2);
             }
 
-            .footer-link{
+            .footer-link {
                 display: inline-block;
                 color: var(--text-color);
                 margin-bottom: var(--my-1);
@@ -500,28 +502,29 @@ footer.footer {
                 font-weight: var(--fontweight-bold);
                 margin: .25rem 0 var(--my-3);
 
-                &:hover{
+                &:hover {
                     color: var(--primary-color);
                 }
             }
 
-            .social{
-                .footer-social{
+            .social {
+                .footer-social {
                     font-size: 1.5rem;
                     color: var(--title-color);
                     margin-right: var(--my-2);
                 }
             }
 
-            .footer-description{
+            .footer-description {
                 display: block;
                 font-size: var(--small-font-size);
             }
-            .address-list{
-                li{
+
+            .address-list {
+                li {
                     margin-bottom: var(--my-2);
 
-                    i{
+                    i {
                         color: var(--primary-color);
                         margin-right: var(--my-1);
                         font-weight: var(--fontweight-medium);
@@ -530,16 +533,18 @@ footer.footer {
             }
         }
     }
-    hr{
+
+    hr {
         background: var(--text-color);
         font-size: .5rem;
         margin-top: 3.5rem;
     }
-    .footer-copyright{
+
+    .footer-copyright {
         text-align: center;
         font-size: var(--small-font-size);
         color: var(--text-color);
-        
+
     }
 }
 
@@ -569,4 +574,146 @@ footer.footer {
     font-size: var(--h1-font-size);
     color: var(--primary-color);
     font-weight: var(--fontweight-medium);
+}
+
+
+// MEDIA QUERIES FOR DIFFERENT SCREENS
+@media screen and (min-width:576px) {
+
+    .home-container,
+    .about-container,
+    .app-container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    section.about,
+    .app,
+    .contact {
+
+        .about-text,
+        .app-data,
+        .contact-data {
+            &.initial {
+                text-align: initial;
+            }
+        }
+    }
+
+    .section-subtitle,
+    .section-title {
+        &.align-left {
+            text-align: initial;
+        }
+    }
+
+    .about-img,
+    .app-img {
+        width: 380px;
+        order: -1;
+    }
+
+    .contact-container {
+        grid-template-columns: 1.75fr 1fr;
+        align-items: center;
+    }
+
+    .contact-button {
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width:769px) {
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding-top: 5rem;
+    }
+
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+
+        .nav-menu {
+            .nav-list {
+                display: flex;
+
+                .nav-list-item {
+                    margin-left: var(--my-5);
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .nav-toggle {
+            display: none;
+        }
+    }
+
+    section.home {
+        .home-container {
+            height: 100vh;
+            justify-content: center;
+
+            .home-img {
+                width: 450px;
+            }
+        }
+    }
+
+    section.about {
+        .about-container {
+            .about-img {
+                width: 430px;
+            }
+        }
+    }
+
+    section.services {
+        .services-container {
+            margin-top: var(--my-6);
+        }
+    }
+
+    section.menu {
+        .menu-container {
+            grid-template-columns: repeat(3, 220px);
+            column-gap: 4rem;
+
+            .menu-content {
+                padding: 1.5rem;
+
+                .menu-img {
+                    width: 130px;
+                }
+            }
+        }
+    }
+
+    section.app {
+        .app-container {
+            .app-store {
+                margin: 0 var(--my-4);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .home-img {
+        width: 500px;
+    }
+
+    .about-container,
+    .app-container {
+        column-gap: 7rem;
+    }
+
 }

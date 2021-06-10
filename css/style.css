@@ -360,6 +360,7 @@ section.app .app-data .app-stores .app-store .app-down-img {
 section.app .app-data .app-img {
   width: 230px;
   justify-self: center;
+  background: green;
 }
 
 section.contact .contact-container {
@@ -453,4 +454,116 @@ footer.footer .footer-copyright {
   font-size: var(--h1-font-size);
   color: var(--primary-color);
   font-weight: var(--fontweight-medium);
+}
+
+@media screen and (min-width: 576px) {
+  .home-container,
+.about-container,
+.app-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  section.about .about-text.initial,
+section.about .app-data.initial,
+section.about .contact-data.initial,
+.app .about-text.initial,
+.app .app-data.initial,
+.app .contact-data.initial,
+.contact .about-text.initial,
+.contact .app-data.initial,
+.contact .contact-data.initial {
+    text-align: initial;
+  }
+
+  .section-subtitle.align-left,
+.section-title.align-left {
+    text-align: initial;
+  }
+
+  .about-img,
+.app-img {
+    width: 380px;
+    order: -1;
+  }
+
+  .contact-container {
+    grid-template-columns: 1.75fr 1fr;
+    align-items: center;
+  }
+
+  .contact-button {
+    justify-self: center;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    margin: 0;
+  }
+
+  .section {
+    padding-top: 5rem;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav .nav-menu .nav-list {
+    display: flex;
+  }
+  .nav .nav-menu .nav-list .nav-list-item {
+    margin-left: var(--my-5);
+    margin-bottom: 0;
+  }
+  .nav .nav-toggle {
+    display: none;
+  }
+
+  section.home .home-container {
+    height: 100vh;
+    justify-content: center;
+  }
+  section.home .home-container .home-img {
+    width: 450px;
+  }
+
+  section.about .about-container .about-img {
+    width: 430px;
+  }
+
+  section.services .services-container {
+    margin-top: var(--my-6);
+  }
+
+  section.menu .menu-container {
+    grid-template-columns: repeat(3, 220px);
+    -moz-column-gap: 4rem;
+         column-gap: 4rem;
+  }
+  section.menu .menu-container .menu-content {
+    padding: 1.5rem;
+  }
+  section.menu .menu-container .menu-content .menu-img {
+    width: 130px;
+  }
+
+  section.app .app-container .app-store {
+    margin: 0 var(--my-4);
+  }
+}
+@media screen and (min-width: 1025px) {
+  .bd-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-img {
+    width: 500px;
+  }
+
+  .about-container,
+.app-container {
+    -moz-column-gap: 7rem;
+         column-gap: 7rem;
+  }
 }/*# sourceMappingURL=style.css.map */
