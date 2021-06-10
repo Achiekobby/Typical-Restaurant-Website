@@ -6,6 +6,9 @@ const sections = document.querySelectorAll("section[id]");
 const mobileMenu = document.getElementById("mobile-menu");
 const headerNav = document.getElementById("header");
 const scrollTopBtn = document.getElementById("scrollTop");
+const themeBtn = document.getElementById("theme-button");
+const darkTheme = "dark-theme";
+const iconTheme = "bx-sun";
 
 const showMenu = () => {
     if (toggleBtn && navMenu) {
@@ -66,3 +69,42 @@ const scrollTop = () => {
     }
 }
 window.addEventListener('scroll', scrollTop);
+
+// CHANGING TO DARK AND LIGHT THEME
+// Maintaining the selected theme after reload
+const selectedTheme = localStorage.getItem("selected-theme");
+const selectedIcon = localStorage.getItem("selected-icon");
+
+// a method to get the current theme
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => document.themeBtn.classList.contains(iconTheme) ? "bx-moon" : "bx-sun";
+
+if (selectedTheme) {
+    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+    themeBtn.classList[selectedIcon === 'bx-moon' ? 'add' : 'remove'](iconTheme);
+}
+
+// Activating or deactivating the theme manually using the button
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle(darkTheme);
+    themeBtn.classList.toggle(iconTheme);
+
+    // saving the theme and the current icon
+    localStorage.setItem("selected-theme", getCurrentTheme());
+    localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+
+// Scroll reveal animation
+const scrollReveal = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: '2000',
+    reset: true
+});
+
+scrollReveal.reveal(`.home-text, .home-img, .about-text, .about-img, 
+.services-content, .menu-content, .app-data,
+.app-img, .contact-data, .contact-button`, {
+    interval: 200
+})

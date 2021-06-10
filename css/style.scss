@@ -76,6 +76,25 @@ html {
     }
 }
 
+body.dark-theme {
+    --title-color: #F1F2F3;
+    --text-color: #C7D1CC;
+    --body-color: #1D2521;
+    --container-color: #27302C;
+}
+
+// DARK THEME BUTTON STYLING STARTS HERE
+.change-theme {
+    position: absolute;
+    right: 1rem;
+    top: 1.8rem;
+    color: var(--text-color);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+// DARK THEME BUTTON STYLING ENDS HERE
+
 body {
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
@@ -340,7 +359,6 @@ section.services {
                 width: 70px;
                 height: 70px;
                 border-radius: 50%;
-                background-color: #FFF;
                 fill: var(--primary-color);
                 margin-bottom: var(--my-1);
             }
@@ -473,7 +491,7 @@ section.contact {
 
 // FOOTER SECTION STYLING STARTS HERE
 footer.footer {
-    background: #f4f4f4;
+
 
     .footer-container {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -561,7 +579,6 @@ footer.footer {
     border: none;
     outline: none;
     border-radius: .3rem;
-    box-shadow: 3px 5px 14px 0px rgba(155, 165, 148, 0.75);
     transition: all .5s linear;
 
     &:hover {
@@ -643,6 +660,11 @@ footer.footer {
                     margin-left: var(--my-5);
                     margin-bottom: 0;
                 }
+            }
+
+            .change-theme {
+                position: initial;
+                margin-left: var(--my-3);
             }
         }
 

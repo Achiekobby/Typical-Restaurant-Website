@@ -65,6 +65,22 @@ html::-webkit-scrollbar-thumb {
   border-radius: 1.5rem;
 }
 
+body.dark-theme {
+  --title-color: #F1F2F3;
+  --text-color: #C7D1CC;
+  --body-color: #1D2521;
+  --container-color: #27302C;
+}
+
+.change-theme {
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
@@ -285,7 +301,6 @@ section.services .services-container .services-content .services-img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #FFF;
   fill: var(--primary-color);
   margin-bottom: var(--my-1);
 }
@@ -376,9 +391,6 @@ section.contact .contact-container .contact-button i {
   margin-right: var(--my-1);
 }
 
-footer.footer {
-  background: #f4f4f4;
-}
 footer.footer .footer-container {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   row-gap: 2rem;
@@ -443,7 +455,6 @@ footer.footer .footer-copyright {
   border: none;
   outline: none;
   border-radius: 0.3rem;
-  box-shadow: 3px 5px 14px 0px rgba(155, 165, 148, 0.75);
   transition: all 0.5s linear;
 }
 .btn:hover {
@@ -514,6 +525,10 @@ section.about .contact-data.initial,
   .nav .nav-menu .nav-list .nav-list-item {
     margin-left: var(--my-5);
     margin-bottom: 0;
+  }
+  .nav .nav-menu .change-theme {
+    position: initial;
+    margin-left: var(--my-3);
   }
   .nav .nav-toggle {
     display: none;
