@@ -1,13 +1,13 @@
 :root {
   --header-height: 3rem;
   /**********COLORS***********/
-  --primary-color: #069C54;
+  --primary-color: #069c54;
   --secondary-color: #048654;
   --title-color: #393939;
   --text-color: #707070;
-  --text-color-light: #A6A6A6;
-  --body-color: #FBFEFD;
-  --container-color: #FFFFFF;
+  --text-color-light: #a6a6a6;
+  --body-color: #fbfefd;
+  --container-color: #ffffff;
   /*********FONT AND TYPOGRAPHY***************/
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 2.3rem;
@@ -66,10 +66,10 @@ html::-webkit-scrollbar-thumb {
 }
 
 body.dark-theme {
-  --title-color: #F1F2F3;
-  --text-color: #C7D1CC;
-  --body-color: #1D2521;
-  --container-color: #27302C;
+  --title-color: #f1f2f3;
+  --text-color: #c7d1cc;
+  --body-color: #1d2521;
+  --container-color: #27302c;
 }
 
 .change-theme {
@@ -448,7 +448,7 @@ footer.footer .footer-copyright {
 .btn {
   padding: var(--my-2);
   background: var(--primary-color);
-  color: #FFF;
+  color: #fff;
   font-size: var(--h3-font-size);
   font-weight: var(--fontweight-medium);
   font-family: "Roboto", sans-serif;
@@ -580,5 +580,10 @@ section.about .contact-data.initial,
 .app-container {
     -moz-column-gap: 7rem;
          column-gap: 7rem;
+  }
+
+  .footer {
+    max-width: 1000px;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=style.css.map */

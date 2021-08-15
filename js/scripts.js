@@ -97,7 +97,7 @@ themeBtn.addEventListener("click", () => {
 
 // Scroll reveal animation
 const scrollReveal = ScrollReveal({
-    origin: 'top',
+    origin: 'bottom',
     distance: '30px',
     duration: '2000',
     reset: true
